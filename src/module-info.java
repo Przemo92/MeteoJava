@@ -6,4 +6,5 @@ module MeteoJava {
     requires javafx.web;
 
     opens kapela;
+    opens kapela.view;
 }
