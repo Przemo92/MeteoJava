@@ -7,4 +7,6 @@ module MeteoJava {
 
     opens kapela;
     opens kapela.view;
+    opens kapela.controller;
+    opens kapela.model;
 }
