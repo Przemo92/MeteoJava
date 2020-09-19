@@ -12,13 +12,13 @@ import java.io.IOException;
 
 public class ViewFactory {
 
-    private WeatherManager weatherManager = new WeatherManager();
+    private WeatherManager weatherManager;
 
     public ViewFactory(WeatherManager weatherManager) {
         this.weatherManager = weatherManager;
     }
 
-    public void showMainWindow(){
+    public void showMainWindow() throws IOException {
 
         BaseController controller = new MainWindowController(weatherManager, this, "MainWindow.fxml");
         initializeStage(controller);

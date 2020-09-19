@@ -1,12 +1,17 @@
 package kapela.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import kapela.WeatherManager;
 import kapela.view.ViewFactory;
 
-public class MainWindowController extends BaseController{
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MainWindowController extends BaseController implements Initializable {
 
     @FXML
     private TextField townNameField;
@@ -14,12 +19,15 @@ public class MainWindowController extends BaseController{
     @FXML
     private Label nameTown;
 
-    public MainWindowController(WeatherManager weatherManager, ViewFactory viewFactory, String fxmlName) {
+    private WeatherManager weatherManager = new WeatherManager();
+    public MainWindowController(WeatherManager weatherManager, ViewFactory viewFactory, String fxmlName) throws IOException {
         super(weatherManager, viewFactory, fxmlName);
     }
 
-    public void setWeatherValue(){
 
-        nameTown.setText("lolek");
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        nameTown.setText(weatherManager.getNameTown());
     }
 }
