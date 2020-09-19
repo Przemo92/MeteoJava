@@ -4,12 +4,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="505.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kapela.controller.MainWindowController">
+<AnchorPane prefHeight="505.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <Label layoutX="380.0" layoutY="35.0" text="MeteoJava" />
       <Label layoutX="45.0" layoutY="67.0" text="Wpisz nazwę miasta" />
-      <Label layoutX="372.0" layoutY="109.0" text="Nazwa miasta" />
+      <Label fx:id="nameTown" layoutX="372.0" layoutY="109.0" />
       <TextField fx:id="townNameField" layoutX="187.0" layoutY="63.0" prefHeight="25.0" prefWidth="593.0" />
    </children>
 </AnchorPane>
