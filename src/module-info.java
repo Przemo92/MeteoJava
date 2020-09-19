@@ -4,6 +4,7 @@ module MeteoJava {
     requires javafx.controls;
     requires javafx.graphics;
     requires javafx.web;
+    requires org.json;
 
     opens kapela;
     opens kapela.view;
