@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="505.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="505.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="380.0" layoutY="35.0" text="MeteoJava" />
-      <Label layoutX="45.0" layoutY="67.0" text="Wpisz nazwę miasta" />
-      <Label fx:id="nameTown" layoutX="372.0" layoutY="109.0" />
-      <TextField fx:id="townNameField" layoutX="187.0" layoutY="63.0" prefHeight="25.0" prefWidth="593.0" />
+      <Label layoutX="380.0" layoutY="22.0" text="MeteoJava" />
+      <SplitPane dividerPositions="0.5" layoutY="63.0" orientation="VERTICAL" prefHeight="439.0" prefWidth="1026.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="1034.0">
+               <children>
+                  <TextField fx:id="townNameField" layoutX="194.0" layoutY="14.0" prefHeight="25.0" prefWidth="593.0" />
+                  <Label layoutX="14.0" layoutY="18.0" text="Wpisz nazwę miasta" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="402.0">
+               <children>
+                  <Pane fx:id="onedayAfterField" layoutX="172.0" layoutY="-4.0" prefHeight="224.0" prefWidth="200.0" />
+                  <Pane fx:id="twoDayAfterFied" layoutX="372.0" layoutY="-2.0" prefHeight="224.0" prefWidth="200.0" />
+                  <Pane fx:id="threeDayAfterField" layoutX="572.0" prefHeight="216.0" prefWidth="200.0" />
+                  <Pane fx:id="fourDayAfterField" layoutX="772.0" layoutY="-1.0" prefHeight="216.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="todayField" layoutY="-2.0" prefHeight="209.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="nameTown" layoutX="31.0" layoutY="62.0" prefHeight="17.0" prefWidth="139.0" />
+                        <Label fx:id="temperatureToday1" layoutX="31.0" layoutY="105.0" prefHeight="17.0" prefWidth="139.0" />
+                        <Label fx:id="descriptionToday1" layoutX="31.0" layoutY="150.0" prefHeight="17.0" prefWidth="139.0" />
+                        <Label fx:id="dateToday1" layoutX="31.0" layoutY="28.0" prefHeight="17.0" prefWidth="139.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>
