@@ -3,7 +3,7 @@ package kapela.controller;
 import kapela.WeatherManager;
 import kapela.view.ViewFactory;
 
-public class BaseController {
+public abstract class BaseController {
 
     protected WeatherManager weatherManager;
     protected ViewFactory viewFactory;

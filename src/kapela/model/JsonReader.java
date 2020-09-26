@@ -15,7 +15,11 @@ import org.json.JSONObject;
 public class JsonReader {
 
     private JSONArray jsonWeatherData;
-    OpenWeatherMap openWeatherMap = new OpenWeatherMap();
+    OpenWeatherMap openWeatherMap;
+
+    public JsonReader(OpenWeatherMap openWeatherMap) {
+        this.openWeatherMap = openWeatherMap;
+    }
 
     private static String readAll(Reader rd) throws IOException {
 
