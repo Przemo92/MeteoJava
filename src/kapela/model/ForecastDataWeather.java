@@ -8,32 +8,40 @@ import java.util.Date;
 
 public class ForecastDataWeather {
 
-    private String nameTown;
     private String temperatureString;
     private double temperatureDouble;
     private String description;
     private String readableDate;
     private String time;
     private String icon;
+    private long dateInSeconds;
     private JsonReader jsonReader;
 
     public ForecastDataWeather(JsonReader jsonReader) {
         this.jsonReader = jsonReader;
     }
 
-    public void fetchData(int dayIndex) throws IOException {
+    public void fetchData(int dayIndex, String nameTown) throws IOException {
 
-        JSONObject item = jsonReader.fetchJsonWeatherDataFromApi().getJSONObject(dayIndex - 1);
+        JSONObject item = jsonReader.fetchJsonWeatherDataFromApi(nameTown).getJSONObject(dayIndex - 1);
         description = item.getJSONArray("weather").getJSONObject(0).get("description").toString();
         icon = item.getJSONArray("weather").getJSONObject(0).get("icon").toString();
 
-        nameTown = "londyn";
-        long dateInSeconds = item.optLong("dt");
-        SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy HH:mm");
+        fetchTimeAndDate(item);
+        fetchTemperature(item);
+
+    }
+
+    public void fetchTimeAndDate(JSONObject item){
+
+        dateInSeconds = item.optLong("dt");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
         readableDate = format.format(new Date(dateInSeconds * 1000)); // convert that in milliseconds
 
         SimpleDateFormat format2 = new SimpleDateFormat("HH:mm");
         time = format2.format(new Date(dateInSeconds *1000));
+    }
+    public void fetchTemperature(JSONObject item){
 
         JSONObject main = item.getJSONObject("main");
         temperatureString = main.get("temp").toString();
@@ -48,16 +56,8 @@ public class ForecastDataWeather {
         }
     }
 
-    public String getNameTown() {
-        return nameTown;
-    }
-
     public String getTemperature() {
         return temperatureString;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public String getReadableDate() {

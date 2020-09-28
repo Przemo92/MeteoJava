@@ -43,9 +43,9 @@ public class JsonReader {
             is.close();
         }
     }
-    public JSONArray fetchJsonWeatherDataFromApi() throws IOException {
+    public JSONArray fetchJsonWeatherDataFromApi(String nameTown) throws IOException {
 
-        JSONObject json = readJsonFromUrl(openWeatherMap.getFullApi());
+        JSONObject json = readJsonFromUrl(openWeatherMap.getFullApi(nameTown));
         try {
             jsonWeatherData = json.getJSONArray("list");
         } catch (JSONException e) {

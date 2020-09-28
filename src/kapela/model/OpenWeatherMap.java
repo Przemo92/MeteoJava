@@ -3,21 +3,18 @@ package kapela.model;
 public class OpenWeatherMap {
 
 
-    private final String apiBase = "http://api.openweathermap.org/data/2.5/forecast?q=";
-    private String nameTown = "Londyn";
-    private final String units = "metric";
-    private final String lang = "pl";
-    private final String apiKey = "347d51e680aef0b1dc1e56c9851eaaf9";
-    private String fullApi = apiBase + nameTown + "&units=" + units + "&appid=" + apiKey + "&lang=" + lang;
+    private final String APIBASE = "http://api.openweathermap.org/data/2.5/forecast?q=";
 
-    public OpenWeatherMap(String nameTown) {
-        this.nameTown = nameTown;
-    }
+    private final String UNITS = "metric";
+    private final String LANG = "pl";
+    private final String APIKEY = "347d51e680aef0b1dc1e56c9851eaaf9";
+    private String fullApi1;
 
-    public OpenWeatherMap() {
-    }
-    public String getFullApi() {
-        return fullApi;
+
+    public String getFullApi(String nameTown) {
+
+        fullApi1 = APIBASE + nameTown + "&units=" + UNITS + "&appid=" + APIKEY + "&lang=" + LANG;
+        return fullApi1;
     }
 
 }

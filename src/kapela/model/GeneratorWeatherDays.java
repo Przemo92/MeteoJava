@@ -10,33 +10,27 @@ public class GeneratorWeatherDays {
         this.forecastDataWeather = forecastDataWeather;
     }
 
-    public String generateDescription(int dayIndex) throws IOException {
+    public String generateTemperature(int dayIndex, String nameTown) throws IOException {
 
-        forecastDataWeather.fetchData(dayIndex);
-
-        return forecastDataWeather.getDescription();
-        }
-    public String generateTemperature(int dayIndex) throws IOException {
-
-        forecastDataWeather.fetchData(dayIndex);
+        forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getTemperature();
     }
-    public String generateIcon(int dayIndex) throws IOException {
+    public String generateIcon(int dayIndex, String nameTown) throws IOException {
 
-        forecastDataWeather.fetchData(dayIndex);
+        forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getIcon();
     }
-    public String generateData(int dayIndex) throws IOException {
+    public String generateData(int dayIndex, String nameTown) throws IOException {
 
-        forecastDataWeather.fetchData(dayIndex);
+        forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getReadableDate();
     }
-    public String generateTime(int dayIndex) throws IOException {
+    public String generateTime(int dayIndex, String nameTown) throws IOException {
 
-        forecastDataWeather.fetchData(dayIndex);
+        forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getTime();
     }
