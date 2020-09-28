@@ -1,15 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="505.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kapela.controller.MainWindowController">
+<AnchorPane prefHeight="960.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="380.0" layoutY="35.0" text="MeteoJava" />
-      <Label layoutX="45.0" layoutY="67.0" text="Wpisz nazwę miasta" />
-      <Label layoutX="372.0" layoutY="109.0" text="Nazwa miasta" />
-      <TextField fx:id="townNameField" layoutX="187.0" layoutY="63.0" prefHeight="25.0" prefWidth="593.0" />
+      <AnchorPane layoutY="700.0" prefHeight="441.0" prefWidth="1016.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="35.0" prefHeight="480.0" prefWidth="1015.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator layoutX="-479.0" layoutY="399.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Separator layoutX="-474.0" layoutY="256.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Separator layoutX="-183.0" layoutY="186.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="temperatureLabel1" layoutX="167.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel1" layoutX="153.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="firstDay" layoutX="23.0" layoutY="145.0" prefHeight="17.0" prefWidth="78.0" text="date1" />
+                  <Label fx:id="secondDay" layoutX="21.0" layoutY="210.0" prefHeight="17.0" prefWidth="78.0" text="date2" />
+                  <Label fx:id="thirdDay" layoutX="21.0" layoutY="282.0" prefHeight="17.0" prefWidth="78.0" text="date3" />
+                  <Label fx:id="fourthDay" layoutX="21.0" layoutY="355.0" prefHeight="17.0" prefWidth="78.0" text="date4" />
+                  <Label fx:id="fifthDay" layoutX="21.0" layoutY="425.0" prefHeight="17.0" prefWidth="78.0" text="date5" />
+                  <Label fx:id="time1" layoutX="164.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time1" />
+                  <Label fx:id="time2" layoutX="269.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time2" />
+                  <Label fx:id="time3" layoutX="386.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time3" />
+                  <Label fx:id="time4" layoutX="500.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time4" />
+                  <Label fx:id="time5" layoutX="612.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time5" />
+                  <Label fx:id="time6" layoutX="727.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time6" />
+                  <Label fx:id="time7" layoutX="835.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time7" />
+                  <Label fx:id="time8" layoutX="943.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time8" />
+                  <Label fx:id="temperatureLabel2" layoutX="279.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel2" layoutX="265.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel3" layoutX="389.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel3" layoutX="375.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel4" layoutX="503.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel4" layoutX="489.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel5" layoutX="617.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel5" layoutX="603.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel6" layoutX="729.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel6" layoutX="715.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel7" layoutX="837.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel7" layoutX="823.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel8" layoutX="948.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel8" layoutX="934.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel9" layoutX="167.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel9" layoutX="153.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel10" layoutX="279.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel10" layoutX="265.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel11" layoutX="389.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel11" layoutX="375.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel12" layoutX="503.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel12" layoutX="489.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel13" layoutX="617.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel13" layoutX="603.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel14" layoutX="729.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel14" layoutX="715.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel15" layoutX="837.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel15" layoutX="823.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel16" layoutX="948.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel16" layoutX="934.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel17" layoutX="167.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel17" layoutX="153.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel18" layoutX="279.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel18" layoutX="265.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel19" layoutX="389.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel19" layoutX="375.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel20" layoutX="503.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel20" layoutX="489.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel21" layoutX="617.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel21" layoutX="603.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel22" layoutX="729.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel22" layoutX="715.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel23" layoutX="837.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel23" layoutX="823.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel24" layoutX="948.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel24" layoutX="934.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel25" layoutX="167.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel25" layoutX="153.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel26" layoutX="279.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel26" layoutX="265.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel27" layoutX="389.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel27" layoutX="375.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel28" layoutX="503.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel28" layoutX="489.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel29" layoutX="617.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel29" layoutX="603.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel30" layoutX="729.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel30" layoutX="715.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel31" layoutX="837.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel31" layoutX="823.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel32" layoutX="948.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel32" layoutX="934.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel33" layoutX="167.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel33" layoutX="153.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel34" layoutX="279.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel34" layoutX="265.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel35" layoutX="389.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel35" layoutX="375.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel36" layoutX="503.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel36" layoutX="489.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel37" layoutX="617.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel37" layoutX="603.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel38" layoutX="729.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel38" layoutX="715.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel39" layoutX="837.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel39" layoutX="823.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel40" layoutX="948.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel40" layoutX="934.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Button layoutX="913.0" layoutY="20.0" mnemonicParsing="false" onAction="#foundAction1" prefHeight="25.0" prefWidth="86.0" text="Szukaj" />
+                  <Label fx:id="errorLabel1" layoutX="145.0" layoutY="52.0" prefHeight="17.0" prefWidth="264.0" />
+                  <Label fx:id="nameTownLabel1" layoutX="477.0" layoutY="54.0" prefHeight="17.0" prefWidth="86.0" />
+               </children>
+            </AnchorPane>
+            <Separator layoutX="56.0" layoutY="-8.0" prefHeight="10.0" prefWidth="1021.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="473.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Separator layoutX="899.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="-7.0" layoutY="119.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Separator layoutY="79.0" prefHeight="3.0" prefWidth="996.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Separator layoutX="792.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="682.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="572.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="459.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="346.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="233.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="123.0" layoutY="78.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="6.0" AnchorPane.topAnchor="78.0" />
+            <Label layoutX="44.0" layoutY="91.0" prefHeight="17.0" prefWidth="33.0" text="Data" />
+            <Label layoutX="16.0" layoutY="23.0" text="Wpisz nazwę miasta:" />
+            <TextField fx:id="textField1" layoutX="144.0" layoutY="19.0" prefHeight="25.0" prefWidth="756.0" />
+            <Separator layoutX="-68.0" layoutY="327.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" prefHeight="441.0" prefWidth="1016.0">
+         <children>
+            <AnchorPane layoutX="35.0" prefHeight="480.0" prefWidth="1015.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator layoutX="-479.0" layoutY="399.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Separator layoutX="-474.0" layoutY="256.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Separator layoutX="-183.0" layoutY="186.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="temperatureLabel41" layoutX="167.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel41" layoutX="153.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="firstDay2" layoutX="23.0" layoutY="145.0" prefHeight="17.0" prefWidth="78.0" text="date1" />
+                  <Label fx:id="secondDay2" layoutX="21.0" layoutY="210.0" prefHeight="17.0" prefWidth="78.0" text="date2" />
+                  <Label fx:id="thirdDay2" layoutX="21.0" layoutY="282.0" prefHeight="17.0" prefWidth="78.0" text="date3" />
+                  <Label fx:id="fourthDay2" layoutX="21.0" layoutY="355.0" prefHeight="17.0" prefWidth="78.0" text="date4" />
+                  <Label fx:id="fifthDay2" layoutX="21.0" layoutY="425.0" prefHeight="17.0" prefWidth="78.0" text="date5" />
+                  <Label fx:id="time9" layoutX="164.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time1" />
+                  <Label fx:id="time10" layoutX="269.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time2" />
+                  <Label fx:id="time11" layoutX="386.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time3" />
+                  <Label fx:id="time12" layoutX="500.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time4" />
+                  <Label fx:id="time13" layoutX="612.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time5" />
+                  <Label fx:id="time614" layoutX="728.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time6" />
+                  <Label fx:id="time15" layoutX="836.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time7" />
+                  <Label fx:id="time16" layoutX="943.0" layoutY="87.0" prefHeight="17.0" prefWidth="33.0" text="time8" />
+                  <Label fx:id="temperatureLabel42" layoutX="279.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel42" layoutX="265.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel43" layoutX="389.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel43" layoutX="375.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel44" layoutX="503.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel44" layoutX="489.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel45" layoutX="617.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel45" layoutX="603.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel46" layoutX="729.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel46" layoutX="715.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel47" layoutX="837.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel47" layoutX="823.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel48" layoutX="948.0" layoutY="124.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel48" layoutX="934.0" layoutY="133.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel49" layoutX="167.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel49" layoutX="153.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel50" layoutX="279.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel50" layoutX="265.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel51" layoutX="389.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel51" layoutX="375.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel52" layoutX="503.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel52" layoutX="489.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel53" layoutX="617.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel53" layoutX="603.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel54" layoutX="729.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel54" layoutX="715.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel55" layoutX="837.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel55" layoutX="823.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel56" layoutX="948.0" layoutY="191.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel56" layoutX="934.0" layoutY="200.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel57" layoutX="167.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel57" layoutX="153.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel58" layoutX="279.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel58" layoutX="265.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel59" layoutX="389.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel59" layoutX="375.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel60" layoutX="503.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel60" layoutX="489.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel61" layoutX="617.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel61" layoutX="603.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel62" layoutX="729.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel62" layoutX="715.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel63" layoutX="837.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel63" layoutX="823.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel64" layoutX="948.0" layoutY="263.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel64" layoutX="934.0" layoutY="272.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel65" layoutX="167.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel65" layoutX="153.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel66" layoutX="279.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel66" layoutX="265.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel67" layoutX="389.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel67" layoutX="375.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel68" layoutX="503.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel68" layoutX="489.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel69" layoutX="617.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel69" layoutX="603.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel70" layoutX="729.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel70" layoutX="715.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel71" layoutX="837.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel71" layoutX="823.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel72" layoutX="948.0" layoutY="336.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel72" layoutX="934.0" layoutY="345.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel73" layoutX="167.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel73" layoutX="153.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel74" layoutX="279.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel74" layoutX="265.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel75" layoutX="389.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel75" layoutX="375.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel76" layoutX="503.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel76" layoutX="489.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel77" layoutX="617.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel77" layoutX="603.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel78" layoutX="729.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel78" layoutX="715.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel79" layoutX="837.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel79" layoutX="823.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label fx:id="temperatureLabel80" layoutX="948.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+                  <Label fx:id="iconLabel80" layoutX="934.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Button layoutX="913.0" layoutY="20.0" mnemonicParsing="false" onAction="#foundAction2" prefHeight="25.0" prefWidth="86.0" text="Szukaj" />
+                  <Label fx:id="errorLabel2" layoutX="145.0" layoutY="52.0" prefHeight="17.0" prefWidth="264.0" />
+                  <Label fx:id="nameTownLabel2" layoutX="477.0" layoutY="54.0" prefHeight="17.0" prefWidth="86.0" />
+               </children>
+            </AnchorPane>
+            <Separator layoutX="899.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="-7.0" layoutY="119.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Separator layoutY="79.0" prefHeight="3.0" prefWidth="996.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Separator layoutX="792.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="682.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="572.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="459.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="346.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="233.0" layoutY="78.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="78.0" />
+            <Separator layoutX="123.0" layoutY="78.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="6.0" AnchorPane.topAnchor="78.0" />
+            <Label layoutX="44.0" layoutY="91.0" prefHeight="17.0" prefWidth="33.0" text="Data" />
+            <Label layoutX="16.0" layoutY="23.0" text="Wpisz nazwę miasta:" />
+            <TextField fx:id="textField2" layoutX="144.0" layoutY="19.0" prefHeight="25.0" prefWidth="756.0" />
+            <Separator layoutX="-68.0" layoutY="327.0" prefHeight="3.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
