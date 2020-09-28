@@ -1,12 +1,10 @@
 package kapela.controller;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import kapela.WeatherManager;
 import kapela.model.ForecastDataWeather;
 import kapela.model.GeneratorWeatherDays;
 import kapela.model.JsonReader;
@@ -19,8 +17,9 @@ import java.util.ResourceBundle;
 
 public class MainWindowController extends BaseController implements Initializable {
 
-    private String nameTown1 = "Londyn";
-    private String nameTown2 = "Poznań";
+    private String nameTown1 = "LONDYN";
+    private String nameTown2 = "POZNAŃ";
+
     @FXML
     private Label temperatureLabel1;
 
@@ -302,6 +301,9 @@ public class MainWindowController extends BaseController implements Initializabl
 
     @FXML
     private Label errorLabel1;
+
+    @FXML
+    private Label errorLabel2;
 
     @FXML
     private Label nameTownLabel1;
@@ -600,9 +602,9 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     void foundAction2() throws IOException {
 
-        if(fieldsAreValid()){
+        if(fieldsAreValid2()){
 
-            nameTown2 = textField2.getText();
+            nameTown2 = textField2.getText().toUpperCase();
             nameTownLabel2.setText(nameTown2);
             inputDataIntoObjects2();
         }
@@ -610,9 +612,9 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     void foundAction1() throws IOException {
 
-        if(fieldsAreValid()){
+        if(fieldsAreValid1()){
 
-            nameTown1 = textField1.getText();
+            nameTown1 = textField1.getText().toUpperCase();
             nameTownLabel1.setText(nameTown1);
             inputDataIntoObjects1();
         }
@@ -622,8 +624,8 @@ public class MainWindowController extends BaseController implements Initializabl
                     new ForecastDataWeather(
                             new JsonReader(
                                     new OpenWeatherMap())));
-    public MainWindowController(WeatherManager weatherManager, ViewFactory viewFactory, String fxmlName) throws IOException {
-        super(weatherManager, viewFactory, fxmlName);
+    public MainWindowController(ViewFactory viewFactory, String fxmlName) throws IOException {
+        super(viewFactory, fxmlName);
     }
 
     @Override
@@ -923,16 +925,19 @@ public class MainWindowController extends BaseController implements Initializabl
             e.printStackTrace();
         }
     }
-    private boolean fieldsAreValid() throws IOException {
+    private boolean fieldsAreValid1() throws IOException {
         if(textField1.getText().isEmpty()) {
             errorLabel1.setText("Proszę wpisz nazwę miasta");
             return false;
         }
-        if(generatorWeatherDays.generateTime(1, nameTown2).isBlank()) {
-            errorLabel1.setText("Wpisano niewłaściwą nazwę miasta");
+        return true;
+    }
+    private boolean fieldsAreValid2() throws IOException {
+
+        if(textField2.getText().isEmpty()) {
+            errorLabel2.setText("Proszę wpisz nazwę miasta");
             return false;
         }
         return true;
     }
-
 }

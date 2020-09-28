@@ -15,6 +15,7 @@ public class ForecastDataWeather {
     private String time;
     private String icon;
     private long dateInSeconds;
+
     private JsonReader jsonReader;
 
     public ForecastDataWeather(JsonReader jsonReader) {
@@ -71,4 +72,5 @@ public class ForecastDataWeather {
     public String getTime() {
         return time;
     }
+
 }

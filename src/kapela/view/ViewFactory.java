@@ -4,7 +4,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import kapela.WeatherManager;
 import kapela.controller.BaseController;
 import kapela.controller.MainWindowController;
 
@@ -12,15 +11,10 @@ import java.io.IOException;
 
 public class ViewFactory {
 
-    private WeatherManager weatherManager;
-
-    public ViewFactory(WeatherManager weatherManager) {
-        this.weatherManager = weatherManager;
-    }
 
     public void showMainWindow() throws IOException {
 
-        BaseController controller = new MainWindowController(weatherManager, this, "MainWindow.fxml");
+        BaseController controller = new MainWindowController(this, "MainWindow.fxml");
         initializeStage(controller);
     }
     private void initializeStage(BaseController baseController){
