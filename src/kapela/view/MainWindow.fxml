@@ -109,7 +109,7 @@
                   <Label fx:id="temperatureLabel40" layoutX="948.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
                   <Label fx:id="iconLabel40" layoutX="934.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
                   <Button layoutX="913.0" layoutY="20.0" mnemonicParsing="false" onAction="#foundAction1" prefHeight="25.0" prefWidth="86.0" text="Szukaj" />
-                  <Label fx:id="errorLabel1" layoutX="145.0" layoutY="52.0" prefHeight="17.0" prefWidth="264.0" />
+                  <Label fx:id="errorLabel1" layoutX="145.0" layoutY="52.0" prefHeight="17.0" prefWidth="264.0" textFill="#f20808" />
                   <Label fx:id="nameTownLabel1" layoutX="477.0" layoutY="54.0" prefHeight="17.0" prefWidth="86.0" />
                </children>
             </AnchorPane>
@@ -231,7 +231,7 @@
                   <Label fx:id="temperatureLabel80" layoutX="948.0" layoutY="406.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
                   <Label fx:id="iconLabel80" layoutX="934.0" layoutY="415.0" prefHeight="25.0" prefWidth="51.0" />
                   <Button layoutX="913.0" layoutY="20.0" mnemonicParsing="false" onAction="#foundAction2" prefHeight="25.0" prefWidth="86.0" text="Szukaj" />
-                  <Label fx:id="errorLabel2" layoutX="145.0" layoutY="52.0" prefHeight="17.0" prefWidth="264.0" />
+                  <Label fx:id="errorLabel2" layoutX="145.0" layoutY="52.0" prefHeight="17.0" prefWidth="264.0" textFill="#e80909" />
                   <Label fx:id="nameTownLabel2" layoutX="477.0" layoutY="54.0" prefHeight="17.0" prefWidth="86.0" />
                </children>
             </AnchorPane>

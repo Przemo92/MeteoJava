@@ -10,25 +10,25 @@ public class GeneratorWeatherDays {
         this.forecastDataWeather = forecastDataWeather;
     }
 
-    public String generateTemperature(int dayIndex, String nameTown) throws IOException {
+    public String generateTemperature(int dayIndex, String nameTown){
 
         forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getTemperature();
     }
-    public String generateIcon(int dayIndex, String nameTown) throws IOException {
+    public String generateIcon(int dayIndex, String nameTown){
 
         forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getIcon();
     }
-    public String generateData(int dayIndex, String nameTown) throws IOException {
+    public String generateData(int dayIndex, String nameTown){
 
         forecastDataWeather.fetchData(dayIndex, nameTown);
 
         return forecastDataWeather.getReadableDate();
     }
-    public String generateTime(int dayIndex, String nameTown) throws IOException {
+    public String generateTime(int dayIndex, String nameTown){
 
         forecastDataWeather.fetchData(dayIndex, nameTown);
 
