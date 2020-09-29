@@ -34,4 +34,10 @@ public class GeneratorWeatherDays {
 
         return forecastDataWeather.getTime();
     }
+    public String generateMessage(String nameTown){
+
+        forecastDataWeather.fetchMessage(nameTown);
+
+        return forecastDataWeather.getMsg();
+    }
 }

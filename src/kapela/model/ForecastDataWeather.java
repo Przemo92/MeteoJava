@@ -2,7 +2,6 @@ package kapela.model;
 
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -10,22 +9,20 @@ public class ForecastDataWeather {
 
     private String temperatureString;
     private double temperatureDouble;
-    private String description;
     private String readableDate;
     private String time;
     private String icon;
     private long dateInSeconds;
-
+    private String msg;
     private JsonReader jsonReader;
 
     public ForecastDataWeather(JsonReader jsonReader) {
         this.jsonReader = jsonReader;
     }
 
-    public void fetchData(int dayIndex, String nameTown) throws IOException {
+    public void fetchData(int dayIndex, String nameTown){
 
-        JSONObject item = jsonReader.fetchJsonWeatherDataFromApi(nameTown).getJSONObject(dayIndex - 1);
-        description = item.getJSONArray("weather").getJSONObject(0).get("description").toString();
+        JSONObject item = jsonReader.transformJsonObjectToArray(nameTown).getJSONObject(dayIndex - 1);
         icon = item.getJSONArray("weather").getJSONObject(0).get("icon").toString();
 
         fetchTimeAndDate(item);
@@ -57,6 +54,10 @@ public class ForecastDataWeather {
         }
     }
 
+    public void fetchMessage(String nameTown){
+
+        msg = jsonReader.fetchWeatherMessage(nameTown);
+    }
     public String getTemperature() {
         return temperatureString;
     }
@@ -71,6 +72,10 @@ public class ForecastDataWeather {
 
     public String getTime() {
         return time;
+    }
+
+    public String getMsg() {
+        return msg;
     }
 
 }

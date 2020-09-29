@@ -15,10 +15,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 public class MainWindowController extends BaseController implements Initializable {
 
     private String nameTown1 = "LONDYN";
     private String nameTown2 = "POZNAŃ";
+    private String msg;
 
     @FXML
     private Label temperatureLabel1;
@@ -600,23 +602,22 @@ public class MainWindowController extends BaseController implements Initializabl
     private TextField textField2;
 
     @FXML
-    void foundAction2() throws IOException {
+    void foundAction2(){
+
+        nameTown2 = textField2.getText().toUpperCase();
 
         if(fieldsAreValid2()){
 
-            nameTown2 = textField2.getText().toUpperCase();
-            nameTownLabel2.setText(nameTown2);
             inputDataIntoObjects2();
         }
     }
     @FXML
-    void foundAction1() throws IOException {
+    void foundAction1(){
 
+        nameTown1 = textField1.getText().toUpperCase();
         if(fieldsAreValid1()){
 
-            nameTown1 = textField1.getText().toUpperCase();
-            nameTownLabel1.setText(nameTown1);
-            inputDataIntoObjects1();
+                inputDataIntoObjects1();
         }
     }
    private GeneratorWeatherDays generatorWeatherDays =
@@ -633,28 +634,50 @@ public class MainWindowController extends BaseController implements Initializabl
 
         inputDataIntoObjects1();
         inputDataIntoObjects2();
+        try {
+            setLabelsWithDateAndTime();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+    public void setLabelsWithDateAndTime() throws IOException {
+
+        firstDay.setText(generatorWeatherDays.generateData(1, nameTown1));
+        secondDay.setText(generatorWeatherDays.generateData(9, nameTown1));
+        thirdDay.setText(generatorWeatherDays.generateData(17, nameTown1));
+        fourthDay.setText(generatorWeatherDays.generateData(25, nameTown1));
+        fifthDay.setText(generatorWeatherDays.generateData(34, nameTown1));
+
+        time1.setText(generatorWeatherDays.generateTime(1, nameTown1));
+        time2.setText(generatorWeatherDays.generateTime(2, nameTown1));
+        time3.setText(generatorWeatherDays.generateTime(3, nameTown1));
+        time4.setText(generatorWeatherDays.generateTime(4, nameTown1));
+        time5.setText(generatorWeatherDays.generateTime(5, nameTown1));
+        time6.setText(generatorWeatherDays.generateTime(6, nameTown1));
+        time7.setText(generatorWeatherDays.generateTime(7, nameTown1));
+        time8.setText(generatorWeatherDays.generateTime(8, nameTown1));
+
+        firstDay2.setText(firstDay.getText());
+        secondDay2.setText(secondDay.getText());
+        thirdDay2.setText(thirdDay.getText());
+        fourthDay2.setText(fourthDay.getText());
+        fifthDay2.setText(fifthDay.getText());
+
+        time9.setText(time1.getText());
+        time10.setText(time2.getText());
+        time11.setText(time3.getText());
+        time12.setText(time4.getText());
+        time13.setText(time5.getText());
+        time614.setText(time6.getText());
+        time15.setText(time7.getText());
+        time16.setText(time8.getText());
+    }
     public void inputDataIntoObjects1() {
 
         try {
             nameTownLabel1.setText(nameTown1);
-
-            firstDay.setText(generatorWeatherDays.generateData(1, nameTown1));
-            secondDay.setText(generatorWeatherDays.generateData(9, nameTown1));
-            thirdDay.setText(generatorWeatherDays.generateData(17, nameTown1));
-            fourthDay.setText(generatorWeatherDays.generateData(25, nameTown1));
-            fifthDay.setText(generatorWeatherDays.generateData(34, nameTown1));
-
-            time1.setText(generatorWeatherDays.generateTime(1, nameTown1));
-            time2.setText(generatorWeatherDays.generateTime(2, nameTown1));
-            time3.setText(generatorWeatherDays.generateTime(3, nameTown1));
-            time4.setText(generatorWeatherDays.generateTime(4, nameTown1));
-            time5.setText(generatorWeatherDays.generateTime(5, nameTown1));
-            time6.setText(generatorWeatherDays.generateTime(6, nameTown1));
-            time7.setText(generatorWeatherDays.generateTime(7, nameTown1));
-            time8.setText(generatorWeatherDays.generateTime(8, nameTown1));
-
+            errorLabel1.setText("");
 
             temperatureLabel1.setText(generatorWeatherDays.generateTemperature(1, nameTown1) + "°C");
             iconLabel1.setGraphic(new ImageView("http://openweathermap.org/img/wn/" + generatorWeatherDays.generateIcon(1, nameTown1) + ".png"));
@@ -784,22 +807,7 @@ public class MainWindowController extends BaseController implements Initializabl
 
         try {
             nameTownLabel2.setText(nameTown2);
-
-            firstDay2.setText(generatorWeatherDays.generateData(1, nameTown2));
-            secondDay2.setText(generatorWeatherDays.generateData(9, nameTown2));
-            thirdDay2.setText(generatorWeatherDays.generateData(17, nameTown2));
-            fourthDay2.setText(generatorWeatherDays.generateData(25, nameTown2));
-            fifthDay2.setText(generatorWeatherDays.generateData(34, nameTown2));
-
-            time9.setText(generatorWeatherDays.generateTime(1, nameTown2));
-            time10.setText(generatorWeatherDays.generateTime(2, nameTown2));
-            time11.setText(generatorWeatherDays.generateTime(3, nameTown2));
-            time12.setText(generatorWeatherDays.generateTime(4, nameTown2));
-            time13.setText(generatorWeatherDays.generateTime(5, nameTown2));
-            time614.setText(generatorWeatherDays.generateTime(6, nameTown2));
-            time15.setText(generatorWeatherDays.generateTime(7, nameTown2));
-            time16.setText(generatorWeatherDays.generateTime(8, nameTown2));
-
+            errorLabel2.setText("");
 
             temperatureLabel41.setText(generatorWeatherDays.generateTemperature(1, nameTown2) + "°C");
             iconLabel41.setGraphic(new ImageView("http://openweathermap.org/img/wn/" + generatorWeatherDays.generateIcon(1, nameTown2) + ".png"));
@@ -925,17 +933,30 @@ public class MainWindowController extends BaseController implements Initializabl
             e.printStackTrace();
         }
     }
-    private boolean fieldsAreValid1() throws IOException {
+    private boolean fieldsAreValid1(){
+
+        msg = generatorWeatherDays.generateMessage(nameTown1);
+
         if(textField1.getText().isEmpty()) {
             errorLabel1.setText("Proszę wpisz nazwę miasta");
             return false;
         }
+        if(msg == "city not found") {
+            errorLabel1.setText("Wpisano błędną nazwę miasta");
+            return false;
+        }
         return true;
     }
-    private boolean fieldsAreValid2() throws IOException {
+    private boolean fieldsAreValid2(){
+
+        msg = generatorWeatherDays.generateMessage(nameTown2);
 
         if(textField2.getText().isEmpty()) {
             errorLabel2.setText("Proszę wpisz nazwę miasta");
+            return false;
+        }
+        if(msg == "city not found") {
+            errorLabel2.setText("Wpisano błędną nazwę miasta");
             return false;
         }
         return true;
